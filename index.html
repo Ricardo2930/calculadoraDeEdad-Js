@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Edad</title>
+    <link rel="stylesheet" href="./stylus.css">
+</head>
+<body>
+
+    <div class="container">
+
+
+        <div class="datos">
+          <div class="data">
+            <h2>DAY</h2>
+            <input class="inputs" type="number" id="día" placeholder="DD" min="1" max="31">
+          </div>
+          <div class="data">
+            <h2>MONTH</h2>
+            <input class="inputs" type="number" id="mes" placeholder="MM" min="1" max="12">
+          </div>
+            <div class="data">
+              <h2>YEAR</h2>
+              <input class="inputs" type="number" id="año" placeholder="YYYY"min="1990" max="2023">
+            </div> 
+        </div>
+
+        <div class="btn">
+          <button type="button" class="btn" id="calcular" onclick="calcular()">Calcular la edad que tengo</button>
+        </div>
+
+
+        <div class="resultados">
+                <div id="valores">
+                    <h2 id="valorAño">--</h2>
+                    <h3>years</h3>
+                </div>
+                <div id="valores">
+                    <h2 id="valorMes">--</h2>
+                    <h3>months</h3>
+                </div>
+                <div id="valores">
+                    <h2 id="valorDia">--</h2>
+                    <h3>days</h3>
+                </div>
+            </div> 
+        </div>
+
+    </div>
+    
+</body>
+<script src="./app.js"></script>
+</html>

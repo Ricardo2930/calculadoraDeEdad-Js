@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background: #BBD2C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #292E49, #536976, #BBD2C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #292E49, #536976, #BBD2C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container{
+    background-color: hsl(0, 0%, 100%);
+    width: 900px;
+    height: 700px;
+    padding: 50px;
+    border-radius: 20px;
+    border-bottom-right-radius: 130px;;
+}
+
+.datos{
+    display: flex;
+    justify-content: center;
+    font-family: 'Poppins', sans-serif;
+    color: hsl(0, 1%, 44%);
+}
+
+.data{
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #0575E6;
+}
+.inputs {
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 3px;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+}
+
+
+button{
+    margin-top: 35px;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    background-color: #f5af19;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    width: 100%;
+
+}
+
+#valores {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+#valores h2,h3{
+    margin-right: 20px;
+    font-size: 100px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+#valores h2{
+    color: #f5af19;
+}
+
+@media screen and (max-width: 680px) {
+    .container{
+        width: 450px;
+        height: 550px;
+    }
+
+    .datos{
+        font-size: 10px;
+    }
+    .inputs {
+        font-size: 17px;
+    }
+    
+    #valores h2,h3 {
+      font-size: 60px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .container{
+        width: 450px;
+        height: 450px;
+    }
+
+    .datos{
+        font-size: 10px;
+    }
+    .inputs {
+        font-size: 15px;
+    }
+    
+    #valores h2,h3 {
+      font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .container{
+        width: 450px;
+        height: 430px;
+    }
+
+    .datos{
+        font-size: 10px;
+    }
+    .inputs {
+        font-size: 15px;
+    }
+    
+    #valores h2,h3 {
+      font-size: 40px;
+    }
+}

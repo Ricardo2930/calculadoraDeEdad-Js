@@ -1,20 +1,48 @@
 const hoy = new Date();
 const diaHoy = hoy.getDate();
-//console.log(diaHoy);
 const mesHoy = hoy.getMonth() + 1;
-// console.log(mesHoy);
 const añoHoy = hoy.getFullYear();
-// console.log(añoHoy)
 
 const año = document.getElementById("valorAño");
 const mes = document.getElementById("valorMes");
 const dia = document.getElementById("valorDia");
 const btn = document.querySelector("button");
 
+const añoNac = document.getElementById("año")
+const mesNac = document.getElementById("mes")
+const diaNac = document.getElementById("día")
+
+diaNac.addEventListener("blur",(e) => {
+    const diaNacim = e.target.value
+    if(diaNacim > 31) {
+        document.getElementById("data-dia").classList.add("data-incorrecta")  
+    }
+})
+
+mesNac.addEventListener("blur",(e)=>{
+    const mesNacim = e.target.value
+    if(mesNacim > 12) {
+        document.getElementById("data-mes").classList.add("data-incorrecta") 
+    }
+
+})
+
+añoNac.addEventListener("blur",(e) => {
+    const añoNacim = e.target.value
+    if(añoNacim > añoHoy || añoNacim < 1991){
+        document.getElementById("data-año").classList.add("data-incorrecta") 
+
+    }
+    if(añoNacim.length < 4){
+        console.log("hhhhh")
+        document.getElementById("data-año").classList.add("data-incorrecta") 
+    }
+})
+
 btn.addEventListener("click", () => {
-    const añoNacimiento = document.getElementById("año").value;
-    const mesNacimiento = document.getElementById("mes").value;
-    const diaNacimiento = document.getElementById("día").value;
+    const añoNacimiento = añoNac.value;
+    const mesNacimiento = mesNac.value;
+    const diaNacimiento = diaNac.value;
 
     const edadAños = añoHoy - añoNacimiento;
     const edadMeses = mesHoy - mesNacimiento;
@@ -22,15 +50,12 @@ btn.addEventListener("click", () => {
 
     if (mesHoy < mesNacimiento) {
         let edadAñosMesMenor = edadAños - 1;
-        //console.log(edadAñosMesMenor);
         año.innerHTML = edadAñosMesMenor;
 
         let edadMesesMesMenor = edadMeses + 11;
-        //console.log(edadMesesMesMenor);
         mes.innerHTML = edadMesesMesMenor;
 
         let edadDiasMesMenor = edadDias + 30;
-        //console.log(edadDiasMesMenor);
         dia.innerHTML = edadDiasMesMenor;
 
         if (diaHoy == diaNacimiento || diaHoy > diaNacimiento) {
@@ -41,24 +66,24 @@ btn.addEventListener("click", () => {
             //console.log(a);
             dia.innerHTML = a;
         }
+
     } else if (mesHoy == mesNacimiento && diaHoy < diaNacimiento) {
         let edadAñosMesIgualDiaMenor = edadAños - 1;
-        //console.log(edadAñosMesIgualDiaMenor)
         año.innerHTML = edadAñosMesIgualDiaMenor;
 
         let edadMesesMesIgualDiaMenor = edadMeses + 11;
-        //console.log(edadMesesMesIgualDiaMenor);
         mes.innerHTML = edadMesesMesIgualDiaMenor;
 
         let edadDiasMesIgualDiaMenor = edadDias + 30;
-        //console.log(edadDiasMesIgualDiaMenor);
         dia.innerHTML = edadDiasMesIgualDiaMenor;
+
     } else if (diaHoy == diaNacimiento && mesHoy > mesNacimiento) {
         año.innerHTML = edadAños;
+
         let edadMesesDiaIgualMesMayor = edadMeses;
-        //console.log(edadMesesDiaIgualMesMayor);
         mes.innerHTML = edadMesesDiaIgualMesMayor;
         dia.innerHTML = edadDias;
+
     } else if (diaHoy < diaNacimiento && mesHoy > mesNacimiento) {
         año.innerHTML = edadAños;
         let m = edadMeses - 1;
@@ -67,9 +92,25 @@ btn.addEventListener("click", () => {
         let a = edadDias + 30;
         //console.log(a);
         dia.innerHTML = a;
+
     } else {
         año.innerHTML = edadAños;
         mes.innerHTML = edadMeses;
         dia.innerHTML = edadDias;
     }
+
+    if(añoNacimiento < añoHoy && mesNacimiento < 13 && diaNacimiento < 32){
+        año.innerHTML="--"
+    }
+    else {
+        dia.innerHTML="--"
+        mes.innerHTML="--"
+        año.innerHTML="--"
+    }
+
+    if(diaNacimiento.length === 0){dia.innerHTML="--"}
+    if(mesNacimiento.length === 0){mes.innerHTML="--"}
+    if(añoNacimiento.length === 0){año.innerHTML="--"}
+
 });
+

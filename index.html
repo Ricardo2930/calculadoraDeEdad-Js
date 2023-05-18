@@ -13,26 +13,27 @@
 
   <div class="container">
 
-
-    <div class="datos">
-      <div class="data">
+    <form action="" class="datos">
+      <div class="data" id="data-dia">
         <h2>DAY</h2>
-        <input class="inputs" type="number" id="día" placeholder="DD" min="1" max="31">
+        <input class="inputs" id="día" placeholder="DD">
+        <p>Debe ser un día válido</p>
       </div>
-      <div class="data">
+      <div class="data" id="data-mes">
         <h2>MONTH</h2>
-        <input class="inputs" type="number" id="mes" placeholder="MM" min="1" max="12">
+        <input class="inputs" id="mes" placeholder="MM">
+        <p>Debe ser un mes válido</p>
       </div>
-      <div class="data">
+      <div class="data" id="data-año">
         <h2>YEAR</h2>
-        <input class="inputs" type="number" id="año" placeholder="YYYY" min="1990" max="2023">
+        <input class="inputs" id="año" placeholder="YYYY">
+        <p>Debe ser un año válido</p>
       </div>
-    </div>
+    </form>
 
     <div class="btn">
       <button type="button" class="btn" id="calcular">Calcular la edad que tengo</button>
     </div>
-
 
     <div class="resultados">
       <div id="valores">
@@ -48,9 +49,11 @@
         <h3>days</h3>
       </div>
     </div>
+
   </div>
 
   </div>
+
 
 </body>
 <script src="./app.js"></script>

@@ -33,8 +33,7 @@ body {
     display: flex;
     justify-content: center;
     font-family: "Poppins", sans-serif;
-    color: hsl(0, 1%, 44%);
-    
+    color: hsl(0, 1%, 44%);   
 }
 
 .data {

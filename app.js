@@ -19,7 +19,6 @@ const diaNac = document.getElementById("día");
 //Sino cumple con la condición a evaluar en diaNac, mesNac y AñoNac, se agrega una classe que contiene un texto adicional y un estilo en el input.
 diaNac.addEventListener("blur", (e) => {
     const diaNacim = e.target.value; //Capturamos el valor del elemento por el parámetro
-    console.log(diaNacim);
     if (diaNacim > 31) {
         document.getElementById("data-dia").classList.add("data-incorrecta");
     }

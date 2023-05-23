@@ -104,11 +104,15 @@ btn.addEventListener("click", () => {
         dia.innerHTML = edadDias;
     }
     //Si la longitud de algun input es 0, que no calcule la edad, por falta de datos
-    if (
-        diaNacimiento.length === 0 ||
-        mesNacimiento.length === 0 ||
-        añoNacimiento.length === 0
-    ) {
+    if (diaNacimiento.length === 0 || mesNacimiento.length === 0 || añoNacimiento.length === 0) {
+        dia.innerHTML = "--";
+        mes.innerHTML = "--";
+        año.innerHTML = "--";
+    }
+
+    if(diaNacimiento < 32 && mesNacimiento < 13){
+
+    }else{
         dia.innerHTML = "--";
         mes.innerHTML = "--";
         año.innerHTML = "--";

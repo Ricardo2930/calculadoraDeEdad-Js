@@ -13,49 +13,48 @@
 
   <div class="container">
 
-    <form action="" class="datos">
-      <div class="data" id="data-dia">
-        <h2>DAY</h2>
-        <input class="inputs" id="día" placeholder="DD">
-        <p>Debe ser un día válido</p>
-      </div>
-      <div class="data" id="data-mes">
-        <h2>MONTH</h2>
-        <input class="inputs" id="mes" placeholder="MM">
-        <p>Debe ser un mes válido</p>
-      </div>
-      <div class="data" id="data-año">
-        <h2>YEAR</h2>
-        <input class="inputs" id="año" placeholder="YYYY">
-        <p>Debe ser un año válido</p>
-      </div>
-    </form>
+        <form action="" class="datos">
+            <div class="data" id="data-dia">
+              <label>DAY</label>
+              <input class="inputs" id="día" placeholder="DD" name="dia">
+              <p >Debe ser un día válido</p>
+              <span>El día debe ser menor que 30</span>
+            </div>
+            <div class="data" id="data-mes">
+              <label>MONTH</label>
+              <input class="inputs" id="mes" placeholder="MM" name="mes">
+              <p>Debe ser un mes válido</p>
+              <span>El mes debe tener menos de 31 días</span>
+            </div>
+            <div class="data" id="data-año">
+              <label>YEAR</label>
+              <input class="inputs" id="año" placeholder="YYYY" name="año">
+              <p>Debe ser un año válido</p>
+              <span>No es un año bisiesto</span>
+            </div>
+        </form>
 
-    <div class="btn">
-      <button type="button" class="btn" id="calcular">Calcular la edad que tengo</button>
-    </div>
+        <div class="btn">
+            <button type="submit" class="btn" id="calcular">Calcular la edad que tengo</button>
+        </div>
 
-    <div class="resultados">
-      <div id="valores">
-        <h2 id="valorAño">--</h2>
-        <h3>years</h3>
-      </div>
-      <div id="valores">
-        <h2 id="valorMes">--</h2>
-        <h3>months</h3>
-      </div>
-      <div id="valores">
-        <h2 id="valorDia">--</h2>
-        <h3>days</h3>
-      </div>
-    </div>
+        <div class="resultados">
+            <div id="valores">
+              <h2 id="valorAño">--</h2>
+              <h3>years</h3>
+            </div>
+            <div id="valores">
+              <h2 id="valorMes">--</h2>
+              <h3>months</h3>
+            </div>
+            <div id="valores">
+              <h2 id="valorDia">--</h2>
+              <h3>days</h3>
+            </div>
+        </div>
 
   </div>
-
-  </div>
-
 
 </body>
-<script src="./app.js"></script>
-
+  <script src="./app.js"></script>
 </html>
